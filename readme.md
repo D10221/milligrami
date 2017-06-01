@@ -1,4 +1,4 @@
-### logic free, just a wrapper  
+### logic free, just a React [Milligram](http://milligram.io/) wrapper  
 
 *doesnt include 'milligram.css'*
 
