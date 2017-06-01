@@ -10,8 +10,9 @@ or directly into "index.html"
     <link src-"somewhere/milligrame.css"/>
 
 
-consume as 
-import { [ElementName] }  from "milligrami/lib/[element-name]"
+Usage: 
+
+    import { [ElementName] }  from "milligrami/lib/[element-name]"
 
 ### Building   
 Webpack'ed:  <code>npm run pack</code>  
