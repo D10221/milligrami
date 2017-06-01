@@ -1,4 +1,6 @@
-doesnt include 'milligram.css'  
+### logic free, just a wrapper  
+
+*doesnt include 'milligram.css'*
 
 If from webpack build, ...from consumer 
 
@@ -7,12 +9,11 @@ or directly into "index.html"
 
     <link src-"somewhere/milligrame.css"/>
 
-logic free  
-jusr a wrapper  
 
 consume as 
 import { [ElementName] }  from "milligrami/lib/[element-name]"
 
+### Building   
 Webpack'ed:  <code>npm run pack</code>  
 
 Built:  <code>npm run build </code>
