@@ -11,7 +11,7 @@
     "clean": "rimraf ./built",
     "rebuild": "npm run clean && npm run build"
   },
-  "keywords": ["milligram", "react"],
+  "keywords": ["milligram", "react", "typescript"],
   "author": "mr.d.",
   "license": "MIT",
   "peerDependencies": {
