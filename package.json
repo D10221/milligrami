@@ -17,11 +17,9 @@
   ],
   "author": "d10221",
   "license": "MIT",
-  "peerDependencies": {
-    "milligram": "^1.3.0"
-  },
   "dependencies": {
-    "react": "^15.5.4"
+    "react": "^15.5.4",
+    "milligram": "^1.3.0"
   },
   "devDependencies": {
     "@types/react": "^15.0.24",
