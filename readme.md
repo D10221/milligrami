@@ -1,20 +1,21 @@
-### logic free, just a React [Milligram](http://milligram.io/) wrapper  
+### logic free, just a React [Milligram](http://milligram.io/) wrapper, with types
 
 *doesnt include 'milligram.css'*
 
-If from webpack build, ...from consumer 
+from consumer 
 
     '@import '~milligram/dist/milligram.css';
 or directly into "index.html"
 
-    <link src-"somewhere/milligrame.css"/>
+    <link src-"somewhere/milligram.css"/>
 
 
 Usage: 
 
-    import { [ElementName] }  from "milligrami/lib/[element-name]"
+    import { [ElementName] }  from "milligrami"
 
 ### Building   
-Webpack'ed:  <code>npm run pack</code>  
 
 Built:  <code>npm run build </code>
+
+"+only 1 target, typescript/es6, commonjs modules."
