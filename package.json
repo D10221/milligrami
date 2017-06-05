@@ -1,6 +1,6 @@
 {
   "name": "milligrami",
-  "version": "0.0.1-0",
+  "version": "0.0.2-0",
   "description": "Milligram React wrapper",
   "main": "lib/index.js",
   "private": true,
@@ -11,7 +11,11 @@
     "clean": "rimraf ./built",
     "rebuild": "npm run clean && npm run build"
   },
-  "keywords": ["milligram", "react", "typescript"],
+  "keywords": [
+    "milligram",
+    "react",
+    "typescript"
+  ],
   "author": "mr.d.",
   "license": "MIT",
   "peerDependencies": {
