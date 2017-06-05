@@ -8,6 +8,7 @@
   "scripts": {
     "test": "mocha ./test.js",
     "build": "tsc -p ./",
+    "dist": "tsc -p tsconfig.lib.json",
     "clean": "rimraf ./lib ./dist ./built",
     "rebuild": "npm run clean && npm run build",
     "pack": "webpack"

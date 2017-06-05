@@ -1,0 +1,7 @@
+node_modules
+built/
+scripts/
+src/
+test.js
+tsconfig.*
+webpack*
