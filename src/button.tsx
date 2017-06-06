@@ -1,16 +1,21 @@
 import * as React from "react";
+import { isDefined } from "./util/is-defined";
 
-export const Button = (props: React.HTMLProps<HTMLButtonElement>) => {
+export type ButtonProps = React.HTMLProps<HTMLButtonElement> & {
+    outline?: boolean,
+    clear?: boolean
+};  
+
+export const Button = (xProps: ButtonProps) => {
+    const { outline, clear , ...props} = xProps;
+    const className = "button" +
+        ( isDefined(outline) && outline !== false? " button-outline" : "" )+ 
+        ( isDefined(clear) && clear !== false? " button-clear"   : "");
     return (
-        <button className="button" {...{
-            className: props.className,
+        <button  {...{
+            className,
             ...props
         }} />);
-};
-
-export const ButtonOutline = (props: React.HTMLProps<HTMLButtonElement>) => {
-    return (
-        <button className="button button-outline" {...props} />);
 };
 
 export const ButtonLink = (props: React.HTMLProps<HTMLAnchorElement>) => (
@@ -40,9 +45,3 @@ export const ButtonInputClear = (props: React.HTMLProps<HTMLInputElement>) => {
         <input className="button button-clear" {...props} />
     );
 };
-
-export const ButtonClear = (props: React.HTMLProps<HTMLButtonElement>) => {
-    return (
-        <button className="button button-clear" {...props} />
-    );
-};      
