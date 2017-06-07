@@ -1,21 +1,32 @@
 import * as React from "react";
-import { isDefined } from "./util/is-defined";
 
 export type ColumnProps = React.HTMLProps<HTMLDivElement> & {
-    xWidth?: 10 | 20 | 25 | 33 | 40 | 50 | 60 | 66 | 75 | 80 | 90,
+    columnWidth?: 10 | 20 | 25 | 33 | 40 | 50 | 60 | 66 | 75 | 80 | 90,
     offset?: 10 | 20 | 25 | 33 | 40 | 50 | 60 | 66 | 75 | 80 | 90,
-    xspan?: boolean
 };
+/**
+ * a <div/> column
+ */
 export const Column = (xProps: ColumnProps) => {
-    const { xspan, xWidth, offset, ...props } = xProps;
+    const { 
+        columnWidth, 
+        offset,
+         ...props } = xProps;
     const className = "column" +
-        (!xWidth ? "" : ` column-${xWidth}`) +
-        (!offset ? "" : ` column-offset-${offset}`);
-    return isDefined(xspan)
-        ? (
-            <span  {...{ className, ...props } } />
-        )
-        : (
-            <div  {...{ className, ...props } } />
-        );
+        (!columnWidth ? "" : ` column-${columnWidth}`) +
+        (!offset ? "" : ` column-offset-${offset}`) ;
+    return (<div  {...{ className, ...props } } />);
+};
+/**
+ * same as @see {Column} but with a <sapn/> instead of a <div/>
+ */
+export const ColumnSpan = (xProps: ColumnProps) => {
+   const { 
+        columnWidth, 
+        offset,
+         ...props } = xProps;
+    const className = "column" +
+        (!columnWidth ? "" : ` column-${columnWidth}`) +
+        (!offset ? "" : ` column-offset-${offset}`) ;
+    return <span  {...{ className, ...props } } />;
 };

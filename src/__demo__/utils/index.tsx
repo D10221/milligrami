@@ -4,7 +4,7 @@ import {
     Column,
     Container,
     Float,
-    LabelInline,
+    Label,
     Row,
 } from "../../";
 export const UtilsView = () => {
@@ -28,7 +28,7 @@ export const UtilsView = () => {
             </Row>
             <Row>
                 <Column>
-                    <LabelInline>Code:</LabelInline>
+                    <Label inLine>Code:</Label>
                     <pre>
                         <code>{
                             `
