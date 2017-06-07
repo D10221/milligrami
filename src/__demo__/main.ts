@@ -11,10 +11,10 @@ app.on("ready", () => {
         icon: path.join(__dirname, "../../resources", "icon.png")
     });
     win.on("ready-to-show", () => {
-        win.show();
-        if (process.env.NODE_ENV !== "production") {
+        if (process.env.NODE_ENV === "development") {
             win.webContents.openDevTools();
         }
+        win.show();
     });
     win.loadURL(`file:///${__dirname}/window.html`);
 });
