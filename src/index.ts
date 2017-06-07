@@ -2,7 +2,6 @@
 /*
     Milligram's styled elements
  */
-export * from "./button-link-fty";
 export * from "./button";
 export * from "./clear-fix";
 export * from "./codes";
