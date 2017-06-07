@@ -9,7 +9,7 @@
     "start": "electron lib/__demo__/main.js",
     "build": "tsc -p ./",
     "build:css": "node-sass ./src/__demo__ -o built/__demo__",
-    "build:html": "node ./scripts/pug.js",
+    "build:html": "node ./scripts/pug-window.js",
     "build:lib": "rimraf lib && tsc -p tsconfig.lib.json",
     "clean": "rimraf ./built",
     "rebuild": "npm run clean && npm run build && npm run build:css && npm run build:html"
