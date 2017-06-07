@@ -1,10 +1,10 @@
 import * as React from "react";
 import * as ReactDom from "react-dom";
 import {
-    Row,
     Button,
     Column,
     Container,
+    Row,
 } from "../";
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
                 </Column>
                 <Column xspan xWidth={50}>
                     <h6>code:</h6>
-                     <code>{" <Button>Plain</Button>"}</code>
+                    <code>{" <Button>Plain</Button>"}</code>
                 </Column>
             </Row>
             <Row>
@@ -32,16 +32,16 @@ const App = () => {
                 </Column>
                 <Column xspan xWidth={50}>
                     <h6>code:</h6>
-                     <code>{" <Button outline >Outline</Button>"}</code>
+                    <code>{" <Button outline >Outline</Button>"}</code>
                 </Column>
             </Row>
-             <Row>
+            <Row>
                 <Column>
                     <Button clear>clear</Button>
                 </Column>
                 <Column xspan xWidth={50}>
                     <h6>code:</h6>
-                     <code>{" <Button clear>clear</Button>"}</code>
+                    <code>{" <Button clear>clear</Button>"}</code>
                 </Column>
             </Row>
         </Container>

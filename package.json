@@ -5,14 +5,14 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "test": "mocha ./test.js",
-    "build": "tsc -p ./",
-    "clean": "rimraf ./built",
-    "rebuild": "npm run clean && npm run build",
-    "build:css": "node-sass ./src/__demo__ -o built/__demo__",
-    "build:demo": "npm run clean && npm run build && npm run build:css && node ./scripts/pug.js",
+    "test": "mocha *.test.js",
     "start": "electron lib/__demo__/main.js",
-    "build:lib": "rimraf lib && tsc -p tsconfig.lib.json"
+    "build": "tsc -p ./",
+    "build:css": "node-sass ./src/__demo__ -o built/__demo__",
+    "build:html": "node ./scripts/pug.js",
+    "build:lib": "rimraf lib && tsc -p tsconfig.lib.json",
+    "clean": "rimraf ./built",
+    "rebuild": "npm run clean && npm run build && npm run build:css && npm run build:html"
   },
   "keywords": [
     "milligram",
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@types/debug": "0.0.29",
+    "@types/mocha": "^2.2.41",
     "@types/react": "^15.0.24",
     "@types/react-dom": "^15.5.0",
     "debug": "^2.6.8",

@@ -8,14 +8,14 @@ export type ColumnProps = React.HTMLProps<HTMLDivElement> & {
 };
 export const Column = (xProps: ColumnProps) => {
     const { xspan, xWidth, offset, ...props } = xProps;
-    const className = "column" + 
+    const className = "column" +
         (!xWidth ? "" : ` column-${xWidth}`) +
         (!offset ? "" : ` column-offset-${offset}`);
-    return isDefined(xspan) 
-    ? (
-        <span  {...{className, ...props} }/>
-    ) 
-    : (
-        <div  {...{className, ...props} }/>
-    );
-}
+    return isDefined(xspan)
+        ? (
+            <span  {...{ className, ...props } } />
+        )
+        : (
+            <div  {...{ className, ...props } } />
+        );
+};

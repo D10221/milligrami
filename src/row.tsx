@@ -8,8 +8,10 @@ export type RowProps = React.HTMLProps<HTMLDivElement> & {
 export const Row = (xProps: RowProps) => {
     const { xwrap, ...props } = xProps;
     const className = "row" +
-    (!isDefined(xwrap) ? "" : " row-wrap");
+        (!isDefined(xwrap) ? "" : " row-wrap");
     return (
 
-        <div {...{className,...props}} />
-);}
+        <div {...{ className, ...props }} />
+    );
+};
+

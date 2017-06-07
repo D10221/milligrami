@@ -4,13 +4,13 @@ import { isDefined } from "./util/is-defined";
 export type ButtonProps = React.HTMLProps<HTMLButtonElement> & {
     outline?: boolean,
     clear?: boolean
-};  
+};
 
 export const Button = (xProps: ButtonProps) => {
-    const { outline, clear , ...props} = xProps;
+    const { outline, clear, ...props } = xProps;
     const className = "button" +
-        ( isDefined(outline) && outline !== false? " button-outline" : "" )+ 
-        ( isDefined(clear) && clear !== false? " button-clear"   : "");
+        (isDefined(outline) && outline !== false ? " button-outline" : "") +
+        (isDefined(clear) && clear !== false ? " button-clear" : "");
     return (
         <button  {...{
             className,
