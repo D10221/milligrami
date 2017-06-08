@@ -1,6 +1,7 @@
 node_modules
 built/
-lib/
+# lib/
+# bundle/
 dist/
 scripts/
 src/
@@ -20,4 +21,5 @@ tslint*
 **/out/*
 **/dist/*
 **/built/*
-**/lib/*
+# **/lib/*
+# **/bundle/*
