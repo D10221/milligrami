@@ -4,6 +4,7 @@
     "module": "commonjs",
     "jsx": "react",
     "declaration": true,
+    "declarationDir": "./types",
     "sourceMap": true,
     "outDir": "./lib",
     "noImplicitAny": true,
@@ -23,6 +24,7 @@
   ],
   "exclude": [
     "./src/__demo__/*",
-    "./src/__test__/*"
+    "./src/__test__/*",
+    "./src/**/bundle.ts"
   ]
 }

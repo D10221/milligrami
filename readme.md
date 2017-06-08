@@ -11,6 +11,7 @@ or directly into "index.html"
 
 
 Usage: 
+### @see: [Milligrami-demo](https://github.com/D10221/milligrami-demo)
 
     import { Button } from "milligrami"
     
@@ -23,6 +24,8 @@ Usage:
     );
 
 
+
+
 Notes:
 - props are passed down to (in this case) the <code><button\/\></code> Tag   
 only the <code>className</code> is appended with the respective Milligram css-class
@@ -33,19 +36,15 @@ only the <code>className</code> is appended with the respective Milligram css-cl
 
 ### Building   
 
-    $npm run build
-
-"+only 1 target, typescript/es6, commonjs modules."
+    $npm run build # builds debug/development
+    $npm run build:lib # builds es6 targeted library
+    $npm run build:bundle # builds webpacke'd umd bundle 
 
 
 ### Testing
 
     $npm run test
 
-
-### Mini demo with electron (prebuilt)
-
-    $npm run start 
 
 ### Compatibillity 
 ``as in 2017's of 'it works on my computer'` ... should work in Chrome`
