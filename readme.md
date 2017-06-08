@@ -12,7 +12,24 @@ or directly into "index.html"
 
 Usage: 
 
-    import { Button }  from "milligrami"
+    import { Button } from "milligrami"
+    
+    const App = () => (
+        <div>
+            <Button> OK </Button>
+            <Button outline> Outline </Button>
+            <Button clear> Clear </Button>
+        </div>
+    );
+
+
+Notes:
+- props are passed down to (in this case) the <code><button\/\></code> Tag   
+only the <code>className</code> is appended with the respective Milligram css-class
+
+        <Button  type="submit" outline/>
+        // will also apply .button.submit css rule
+    
 
 ### Building   
 
@@ -31,4 +48,4 @@ Usage:
     $npm run start 
 
 ### Compatibillity 
-``as in 2017's of 'it works on my computer'` ... works in Chrome`
+``as in 2017's of 'it works on my computer'` ... should work in Chrome`

@@ -10,4 +10,3 @@ export * from "./container";
 export * from "./float";
 export * from "./label";
 export * from "./row";
-export * from "./submit";

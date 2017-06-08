@@ -8,8 +8,8 @@ export type ColumnProps = React.HTMLProps<HTMLDivElement> & {
  * a <div/> column
  */
 export const Column = (xProps: ColumnProps) => {
-    const { 
-        columnWidth, 
+    const {
+        columnWidth,
         offset,
          ...props } = xProps;
     const className = "column" +
@@ -21,12 +21,12 @@ export const Column = (xProps: ColumnProps) => {
  * same as @see {Column} but with a <sapn/> instead of a <div/>
  */
 export const ColumnSpan = (xProps: ColumnProps) => {
-   const { 
-        columnWidth, 
+   const {
+        columnWidth,
         offset,
          ...props } = xProps;
-    const className = "column" +
+   const className = "column" +
         (!columnWidth ? "" : ` column-${columnWidth}`) +
         (!offset ? "" : ` column-offset-${offset}`) ;
-    return <span  {...{ className, ...props } } />;
+   return <span  {...{ className, ...props } } />;
 };
