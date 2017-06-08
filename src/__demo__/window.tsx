@@ -5,18 +5,21 @@ import {
     Row,
 } from "../";
 
-import { RowsView } from "./rows";
 import { ButtonsView } from "./buttons";
-import { UtilsView } from "./utils";
 import { ColumnsView } from "./columns";
+import { RowsView } from "./rows";
+import { UtilsView } from "./utils";
 
 const App = () => {
     return (
         <Container>
             <Row><h1>Milligram</h1></Row>
             <ButtonsView />
+            <hr/>
             <UtilsView />
+            <hr/>
             <RowsView />
+            <hr/>
             <ColumnsView />
         </Container>
     );

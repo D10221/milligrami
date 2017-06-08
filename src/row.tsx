@@ -12,13 +12,7 @@ export type RowProps = React.HTMLProps<HTMLDivElement> & {
 };
 
 /**
- * xwrap
- * row-no-padding
- * row-top
- * row-bottom
- * row-center
- * row-stretch
- * row-baseline
+ *
  */
 export const Row = (xProps: RowProps) => {
     const {

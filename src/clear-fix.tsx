@@ -1,6 +1,7 @@
 import * as React from "react";
 
 export type ClearFixProps = React.HTMLProps<HTMLDivElement>;
+
 /**
  * Clear any float
  */

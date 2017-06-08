@@ -18,9 +18,6 @@ export const ButtonsView = () => {
             </Row>
             <Row>
                 <Column>
-                    
-                </Column>
-                <Column>
                     <Button>Button</Button>
                 </Column>
                 <Column>
