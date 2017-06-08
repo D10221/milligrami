@@ -1,0 +1,10 @@
+node_modules
+built/
+scripts/
+src/
+test.js
+tsconfig.*
+webpack*
+*.tgz
+*.zip
+lib/__demo__
