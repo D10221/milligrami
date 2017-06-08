@@ -26,9 +26,6 @@ Usage:
 Notes:
 - props are passed down to (in this case) the <code><button\/\></code> Tag   
 only the <code>className</code> is appended with the respective Milligram css-class
-
-        <Button  type="submit" outline/>
-        // will also apply .button.submit css rule
     
 
 ### Building   
