@@ -23,7 +23,7 @@ Usage:
         </div>
     );
 
-Notes:
+Note:
 All elements are doing pretty much the same,   
 On a simplistic approach
 
@@ -34,7 +34,7 @@ only the <code>className</code> is appended with the respective Milligram css-cl
 
 should render 
 
-    <button type-"submit" class="extra-class button button-out-line">
+    <button type-"submit" class="extra-class button button-outline">
         <!-- children ? -->
     <button>
 
