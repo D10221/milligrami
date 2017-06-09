@@ -5,15 +5,15 @@ export type ContainerProps = React.HTMLProps<HTMLDivElement> & {
 
 export const Container = (xProps: ContainerProps) => {
     const { className, ...props } = xProps;
-    const augmented = "container " + className;
+    const augmented = (className ? `${className} ` : "") + "container";
     return (
-        <div {...{augmented, ...props }} />
+        <div {...{ className: augmented, ...props }} />
     );
 };
 export const ContainerSection = (xProps: ContainerProps) => {
     const { className, ...props } = xProps;
-    const augmented = "container " + className;
+    const augmented = (className ? `${className} ` : "") + "container";
     return (
-        <section {...{augmented, ...props }} />
+        <section {...{ className: augmented, ...props }} />
     );
 };

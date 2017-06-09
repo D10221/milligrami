@@ -14,6 +14,7 @@ describe("Buttons", () => {
                 <Button id="button" />
                 <Button id="button-outline" outline />
                 <Button id="button-clear" clear />
+                <Button id="button-extra-class" className="extra-class"/>
             </div>)
     )).window as Window;
 
@@ -41,6 +42,15 @@ describe("Buttons", () => {
         assert.equal(
             button.className,
             "button button-clear"
+        );
+    });
+
+    it("button-extra-class", () => {
+        const button = (document.getElementById("button-extra-class"));
+        assert.equal(button.tagName.toLowerCase(), "button");
+        assert.equal(
+            button.className,
+            "extra-class button"
         );
     });
 });

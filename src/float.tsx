@@ -1,13 +1,35 @@
 import * as React from "react";
+import { warn } from "./util/warn";
 export type FloatProps = React.HTMLProps<HTMLDivElement> & {
-    xFloat: "left" | "right"
+    direction?: "left" | "right";
+    left?: boolean,
+    right?: boolean,
 };
+
+/**
+ * TODO: HOC
+ */
 export const Float = (xProps: FloatProps) => {
-    const { xFloat, className, ...props } = xProps;
-    const cname = className +
-        (xFloat === "left"
-        ? " float-left"
-        : " float-right");
+    const { left, right, direction, className, ...props } = xProps;
+
+    const cname = (className ? `${className} ` : "") +
+        (
+            left ? "float-left" : ""
+        ) +
+        (
+            right ? "float-right" : ""
+        ) +
+        (
+            direction === "left" ? "float-left" : ""
+        ) +
+        (
+            direction === "right" ? "float-right" : ""
+        );
+
+    if (left && right || ((left || right) && direction)) {
+        warn(`what are you trying to do ? ${cname}`);
+    }
+
     return (
         <div {...{ className: cname, ...props } } />
     );

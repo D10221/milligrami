@@ -18,37 +18,37 @@ export type LinkButtonProps = React.HTMLProps<HTMLAnchorElement> & MilligramButt
 export type InputButtonProps = React.HTMLProps<HTMLInputElement> & MilligramButtonProps;
 
 export const Button = (xProps: ButtonProps) => {
-    const { outline, clear, ...props } = xProps;
-    const className = "button" +
+    const { outline, clear, className, ...props } = xProps;
+    const cn = (className ? `${className} ` : "") + "button" +
         (isDefined(outline) && outline !== false ? " button-outline" : "") +
         (isDefined(clear) && clear !== false ? " button-clear" : "");
     return (
         <button  {...{
-            className,
+            className: cn,
             ...props
         }} />);
 };
 
 export const LinkButton = (xProps: LinkButtonProps) => {
-    const { outline, clear, ...props } = xProps;
-    const className = "button" +
+    const { outline, clear, className, ...props } = xProps;
+    const cn = (className ? `${className} ` : "") + "button" +
         (isDefined(outline) && outline !== false ? " button-outline" : "") +
         (isDefined(clear) && clear !== false ? " button-clear" : "");
     return (
         <a  {...{
-            className,
+            className: cn,
             ...props
         }} />);
 };
 
 export const InputButton = (xProps: InputButtonProps) => {
-    const { outline, clear, ...props } = xProps;
-    const className = "button" +
+    const { outline, clear, className, ...props } = xProps;
+    const cn = (className ? `${className} ` : "") + "button" +
         (isDefined(outline) && outline !== false ? " button-outline" : "") +
         (isDefined(clear) && clear !== false ? " button-clear" : "");
     return (
         <input  {...{
-            className,
+            className: cn,
             ...props
         }} />);
 };

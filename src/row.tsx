@@ -23,17 +23,18 @@ export const Row = (xProps: RowProps) => {
         rowCenter,
         rowStretch,
         rowBaseline,
+        className,
         ...props } = xProps;
-    const className = "row" +
+    const cn = (className ? `${className} ` : "") + "row" +
         (isUndefinedOrFalse(rowWrap) ? "" : " row-wrap") +
         (isUndefinedOrFalse(rowNoPadding) ? "" : " row-no-padding") +
         (isUndefinedOrFalse(rowTop) ? "" : " row-top") +
         (isUndefinedOrFalse(rowBottom) ? "" : " row-bottom") +
         (isUndefinedOrFalse(rowCenter) ? "" : " row-center") +
         (isUndefinedOrFalse(rowStretch) ? "" : " row-stretch") +
-        (isUndefinedOrFalse(rowStretch) ? "" : " row-baseline");
+        (isUndefinedOrFalse(rowBaseline) ? "" : " row-baseline");
     return (
 
-        <div {...{ className, ...props }} />
+        <div {...{ className: cn, ...props }} />
     );
 };
