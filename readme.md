@@ -23,15 +23,21 @@ Usage:
         </div>
     );
 
-
-
-
 Notes:
+All elements are doing pretty much the same,   
+On a simplistic approach
+
 - props are passed down to (in this case) the <code><button\/\></code> Tag   
 only the <code>className</code> is appended with the respective Milligram css-class
 
-        <Button  type="submit" outline/>
-        // will also apply .button.submit css rule
+        <Button  type="submit" outline className="extra-class"/>
+
+should render 
+
+    <button type-"submit" class="extra-class button button-out-line">
+        <!-- children ? -->
+    <button>
+
     
 
 ### Building   
