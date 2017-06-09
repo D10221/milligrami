@@ -9,24 +9,28 @@ export type ColumnProps = React.HTMLProps<HTMLDivElement> & {
  */
 export const Column = (xProps: ColumnProps) => {
     const {
+       className,
         columnWidth,
         offset,
-         ...props } = xProps;
-    const className = "column" +
+        ...props } = xProps;
+    const cn = (className ? `${className} ` : "") +
+        "column" +
         (!columnWidth ? "" : ` column-${columnWidth}`) +
-        (!offset ? "" : ` column-offset-${offset}`) ;
-    return (<div  {...{ className, ...props } } />);
+        (!offset ? "" : ` column-offset-${offset}`);
+    return (<div  {...{ className: cn, ...props } } />);
 };
 /**
  * same as @see {Column} but with a <sapn/> instead of a <div/>
  */
 export const ColumnSpan = (xProps: ColumnProps) => {
-   const {
+    const {
+       className,
         columnWidth,
         offset,
-         ...props } = xProps;
-   const className = "column" +
+        ...props } = xProps;
+    const cn = (className ? `${className} ` : "") +
+        "column" +
         (!columnWidth ? "" : ` column-${columnWidth}`) +
-        (!offset ? "" : ` column-offset-${offset}`) ;
-   return <span  {...{ className, ...props } } />;
+        (!offset ? "" : ` column-offset-${offset}`);
+    return <span  {...{ className: cn, ...props } } />;
 };

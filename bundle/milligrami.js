@@ -214,21 +214,23 @@ var React = __webpack_require__(0);
  * a <div/> column
  */
 exports.Column = function (xProps) {
-    var columnWidth = xProps.columnWidth, offset = xProps.offset, props = __rest(xProps, ["columnWidth", "offset"]);
-    var className = "column" +
+    var className = xProps.className, columnWidth = xProps.columnWidth, offset = xProps.offset, props = __rest(xProps, ["className", "columnWidth", "offset"]);
+    var cn = (className ? className + " " : "") +
+        "column" +
         (!columnWidth ? "" : " column-" + columnWidth) +
         (!offset ? "" : " column-offset-" + offset);
-    return (React.createElement("div", __assign({}, __assign({ className: className }, props))));
+    return (React.createElement("div", __assign({}, __assign({ className: cn }, props))));
 };
 /**
  * same as @see {Column} but with a <sapn/> instead of a <div/>
  */
 exports.ColumnSpan = function (xProps) {
-    var columnWidth = xProps.columnWidth, offset = xProps.offset, props = __rest(xProps, ["columnWidth", "offset"]);
-    var className = "column" +
+    var className = xProps.className, columnWidth = xProps.columnWidth, offset = xProps.offset, props = __rest(xProps, ["className", "columnWidth", "offset"]);
+    var cn = (className ? className + " " : "") +
+        "column" +
         (!columnWidth ? "" : " column-" + columnWidth) +
         (!offset ? "" : " column-offset-" + offset);
-    return React.createElement("span", __assign({}, __assign({ className: className }, props)));
+    return React.createElement("span", __assign({}, __assign({ className: cn }, props)));
 };
 
 
