@@ -1,6 +1,6 @@
 {
   "name": "milligrami",
-  "version": "0.2.2-0",
+  "version": "0.2.2",
   "description": "Milligram React wrapper",
   "main": "lib/index.js",
   "typings": "types/index.d.ts",
