@@ -1,6 +1,6 @@
 {
   "name": "milligrami",
-  "version": "0.2.1-0",
+  "version": "0.2.2-0",
   "description": "Milligram React wrapper",
   "main": "lib/index.js",
   "typings": "types/index.d.ts",
@@ -33,7 +33,7 @@
     "@types/jsdom": "^11.0.0",
     "@types/mocha": "^2.2.41",
     "@types/react": "^15.0.24",
-    "@types/react-dom": "^15.5.0",    
+    "@types/react-dom": "^15.5.0",
     "debug": "^2.6.8",
     "electron": "^1.6.10",
     "jsdom": "^11.0.0",
