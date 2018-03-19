@@ -33,6 +33,7 @@
     "jsdom": "^11.0.0",
     "react": "16.2.0",
     "react-dom": "16.2.0",
+    "rimraf": "2.6.2",
     "ts-jest": "22.4.2",
     "ts-loader": "4.1.0",
     "typescript": "2.7.2",
