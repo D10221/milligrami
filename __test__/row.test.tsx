@@ -4,7 +4,7 @@ const JSDOM = require("jsdom").JSDOM;
 import { renderToString } from "react-dom/server";
 import {
     Row
-} from "../row";
+} from "../";
 
 describe("Rows", () => {
 

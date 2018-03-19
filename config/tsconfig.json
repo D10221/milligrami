@@ -16,11 +16,7 @@
     "noFallthroughCasesInSwitch": true    
   },
   "include": [
-    "./src/**/*.ts",
-     "./src/**/*.tsx"
-  ],
-  "exclude": [
-    "./src/__demo__/*",
-    "./src/__test__/*"
+    "../src/**/*.ts",
+     "../src/**/*.tsx"
   ]
 }

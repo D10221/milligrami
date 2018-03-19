@@ -1,5 +1,5 @@
 import * as React from "react";
-import { isUndefinedOrFalse } from "./util/is-defined";
+import { isUndefinedOrFalse } from "./util";
 
 export type RowProps = React.HTMLProps<HTMLDivElement> & {
     rowWrap?: boolean,
@@ -34,7 +34,6 @@ export const Row = (xProps: RowProps) => {
         (isUndefinedOrFalse(rowStretch) ? "" : " row-stretch") +
         (isUndefinedOrFalse(rowBaseline) ? "" : " row-baseline");
     return (
-
         <div {...{ className: cn, ...props }} />
     );
 };

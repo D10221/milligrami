@@ -4,7 +4,7 @@ const JSDOM = require("jsdom").JSDOM;
 import { renderToString } from "react-dom/server";
 import {
     Button
-} from "../button";
+} from "../";
 
 describe("Buttons", () => {
 

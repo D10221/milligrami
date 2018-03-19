@@ -4,7 +4,7 @@ const JSDOM = require("jsdom").JSDOM;
 import { renderToString } from "react-dom/server";
 import {
     Column
-} from "../Column";
+} from "../";
 
 describe("Columns", () => {
 

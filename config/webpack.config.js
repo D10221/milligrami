@@ -1,14 +1,18 @@
 const path = require("path");
 const webpack = require("webpack");
-const tsLoaderConfigFileName = "./tsconfig.bundle.json"
-
+const tsConfigPath = path.resolve(__dirname, "./tsconfig.json")
+const args = process.argv.slice(2);
+const mode = args[args.indexOf("--mode") + 1] === "production" ? "production" : "development";
+const production = mode === "production";
+console.log("mode: production: ", mode, production);
 module.exports = {
+    devtool: (!production ? "source-map" : undefined), 
+    mode,
     entry: {
-        'milligrami': './src/index.ts',
-        'milligrami.min': './src/index.ts'
+        ['milligrami' + (production ? ".min" : "")]: path.resolve(__dirname, '../src/index.ts'),
     },
     output: {
-        path: path.resolve(__dirname, 'bundle'),
+        path: path.resolve(__dirname, '../bundle'),
         filename: '[name].js',
         libraryTarget: 'umd',
         library: 'Milligrami',
@@ -19,18 +23,14 @@ module.exports = {
     },
     // devtool: 'source-map',
     plugins: [
-        new webpack.optimize.UglifyJsPlugin({
-            minimize: true,
-            sourceMap: true,
-            include: /\.min\.js$/,
-        })
+
     ],
     module: {
         rules: [{
             test: /\.tsx?$/,
             loader: 'ts-loader',
             options: {
-                configFileName: tsLoaderConfigFileName
+                configFile: tsConfigPath
             }
         }],
     },

@@ -6,7 +6,7 @@
  */
 
 import * as React from "react";
-import { isDefined } from "./util/is-defined";
+import { isDefined } from "./util";
 
 export interface MilligramButtonProps {
     outline?: boolean;
