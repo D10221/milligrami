@@ -4,7 +4,7 @@ const JSDOM = require("jsdom").JSDOM;
 import { renderToString } from "react-dom/server";
 import {
     Float
-} from "../float";
+} from "../";
 
 describe("Float", () => {
 

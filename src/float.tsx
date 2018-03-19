@@ -1,5 +1,5 @@
 import * as React from "react";
-import { warn } from "./util/warn";
+import { warn } from "./util";
 export type FloatProps = React.HTMLProps<HTMLDivElement> & {
     direction?: "left" | "right";
     left?: boolean,

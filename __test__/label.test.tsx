@@ -4,7 +4,7 @@ const JSDOM = require("jsdom").JSDOM;
 import { renderToString } from "react-dom/server";
 import {
     Label
-} from "../Label";
+} from "../";
 
 describe("Labels", () => {
 
