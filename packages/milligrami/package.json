@@ -8,11 +8,11 @@
     "test": "jest __test__",
     "build": "tsc -p ./",
     "rebuild": "npm run clean && npm run build",
-    "clean": "rimraf ./lib",
-    "bundle": "webpack --config ./config/webpack.config.js --mode production",
-    "clean:bundle": "rimraf ./bundle",
-    "rebundle": "npm run clean:bundle && npm run bundle",
-    "build:all": "npm run rebuild && npm run rebundle"
+    "clean": "../../node_modules/.bin/rimraf ./lib",
+    "build:umd": "webpack --config ./config/webpack.config.js --mode production",
+    "clean:umd": "../../node_modules/.bin/rimraf ./umd",
+    "rebuild:umd": "npm run clean:umd && npm run build:umd",
+    "build:all": "npm run rebuild && npm run rebuild:umd"
   },
   "keywords": [
     "milligram",
