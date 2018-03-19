@@ -5,17 +5,10 @@
 from consumer
 
     '@import '~milligram/dist/milligram.css';
+    
 or directly into "index.html"
 
     <link src-"somewhere/milligram.css"/>
-
-Install: 
-    
-    $npm install milligrami --save # or --save-dev 'dont what you want to do with it :)
-
-Uninstall:
-
-    $npm uninstall milligrami --save # and forget you ever seen it
 
 Usage: 
 ### @see: [Milligrami-demo](https://github.com/D10221/milligrami-demo)
