@@ -1,44 +1,72 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Milligrami
 
-## Available Scripts
+Is a React [Milligram](http://milligram.io/) wrapper
 
-In the project directory, you can run:
+## Install:
 
-### `npm start`
+    # yarn add milligrami
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+OR
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+    # npm i milligrami
 
-### `npm test`
+OR
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    # <script
+        src="https://unpkg.com/milligrami@0.3.1/lib/umd/miliigrami.min.js"
+        ></script>
 
-### `npm run build`
+### Batteries not included
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+_doesnt include 'milligram.css'_
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+From consumer
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    '@import '~milligram/dist/milligram.css';
 
-### `npm run eject`
+or directly into "index.html"
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    <link src-"somewhere/milligram.css"/>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Usage:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### @see: [Milligrami-demo](packages/milligrami-demo)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    import { Button } from "milligrami"
 
-## Learn More
+    const App = () => (
+        <div>
+            <Button> OK </Button>
+            <Button outline> Outline </Button>
+            <Button clear> Clear </Button>
+        </div>
+    );
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Note:
+All elements are doing pretty much the same,
+On a simplistic approach
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- props are passed down to (in this case) the <code><button\/\></code> Tag
+  only the <code>className</code> is appended with the respective Milligram css-class
+
+          <Button  type="submit" outline className="extra-class"/>
+
+should render
+
+    <button type-"submit" class="extra-class button button-outline">
+        <!-- children ? -->
+    <button>
+
+### Building
+
+    #cd packages/milligrami
+    $npm run build
+
+### Testing
+
+    #cd packages/milligrami
+    $npm run test
+
+### Compatibillity
+
+\`as in 2018's of "it works on my computer"`... should work in Chrome`
