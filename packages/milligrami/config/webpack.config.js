@@ -12,7 +12,7 @@ module.exports = {
         ['milligrami' + (production ? ".min" : "")]: path.resolve(__dirname, '../src/index.ts'),
     },
     output: {
-        path: path.resolve(__dirname, '../bundle'),
+        path: path.resolve(__dirname, '../lib/umd'),
         filename: '[name].js',
         libraryTarget: 'umd',
         library: 'Milligrami',

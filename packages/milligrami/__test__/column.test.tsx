@@ -4,7 +4,7 @@ const JSDOM = require("jsdom").JSDOM;
 import { renderToString } from "react-dom/server";
 import {
     Column
-} from "../";
+} from "../src";
 
 describe("Columns", () => {
 
@@ -16,7 +16,7 @@ describe("Columns", () => {
                 <Column id="column-offset" offset={10}/>
                 <Column id="column-width-offset" offset={10} columnWidth={10}/>
                 <Column id="column-extra-class" offset={10} columnWidth={10} className="extra-class"/>
-            </div>)
+            </div> as any)
     )).window as Window;
 
     it("Column", () => {

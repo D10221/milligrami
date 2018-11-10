@@ -4,7 +4,7 @@ const JSDOM = require("jsdom").JSDOM;
 import { renderToString } from "react-dom/server";
 import {
     Button
-} from "../";
+} from "../src";
 
 describe("Buttons", () => {
 
@@ -15,7 +15,7 @@ describe("Buttons", () => {
                 <Button id="button-outline" outline />
                 <Button id="button-clear" clear />
                 <Button id="button-extra-class" className="extra-class"/>
-            </div>)
+            </div> as any)
     )).window as Window;
 
     it("button", () => {

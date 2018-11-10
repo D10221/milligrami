@@ -10,3 +10,5 @@ node_modules
 **/types/*
 **/bundle/*
 **/umd/*
+# too much noise
+*.lock

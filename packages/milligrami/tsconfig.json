@@ -4,19 +4,17 @@
     "module": "commonjs",
     "jsx": "react",
     "declaration": true,
-    "declarationDir": "./types",
     "sourceMap": true,
-    "outDir": "./built",
+    "outDir": "./lib",
     "noImplicitAny": true,
     "strictNullChecks": false,
     "noImplicitThis": true,
-    "alwaysStrict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true
   },
   "include": [
     "./src/**/*.ts",

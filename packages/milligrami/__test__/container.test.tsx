@@ -4,7 +4,7 @@ const JSDOM = require("jsdom").JSDOM;
 import { renderToString } from "react-dom/server";
 import {
     Container
-} from "../";
+} from "../src";
 
 describe("Containers", () => {
 
@@ -15,7 +15,7 @@ describe("Containers", () => {
             <div>
                 <Container id="container" />
                 <Container id="container-extra-class" className="extra-class"/>
-            </div>)
+            </div> as any)
     )).window as Window;
 
     it("container", () => {

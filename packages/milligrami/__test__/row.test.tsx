@@ -4,7 +4,7 @@ const JSDOM = require("jsdom").JSDOM;
 import { renderToString } from "react-dom/server";
 import {
     Row
-} from "../";
+} from "../src";
 
 describe("Rows", () => {
 
@@ -20,7 +20,7 @@ describe("Rows", () => {
                 <Row id="row-stretch" rowStretch />
                 <Row id="row-baseline" rowBaseline />
                 <Row id="row-extra-class" className="extra-class" />
-            </div>)
+            </div> as any)
     )).window as Window;
 
     it("row", () => {

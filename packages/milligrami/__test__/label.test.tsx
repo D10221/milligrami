@@ -4,7 +4,7 @@ const JSDOM = require("jsdom").JSDOM;
 import { renderToString } from "react-dom/server";
 import {
     Label
-} from "../";
+} from "../src";
 
 describe("Labels", () => {
 
@@ -14,7 +14,7 @@ describe("Labels", () => {
                 <Label id="label" />
                 <Label id="label-inline" inLine />
                 <Label id="label-extra-class" inLine className="extra-class" />
-            </div>)
+            </div> as any)
     )).window as Window;
 
     it("label", () => {

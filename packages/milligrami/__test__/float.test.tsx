@@ -4,7 +4,7 @@ const JSDOM = require("jsdom").JSDOM;
 import { renderToString } from "react-dom/server";
 import {
     Float
-} from "../";
+} from "../src";
 
 describe("Float", () => {
 
@@ -19,7 +19,7 @@ describe("Float", () => {
                 <Float id="float-direction-right" direction="right"/>
                 <Float id="float-non-sense" direction="right" left right/>
                 <Float id="float-extra-class" className="extra-class"/>
-            </div>)
+            </div> as any)
     )).window as Window;
 
     it("float-left", () => {
