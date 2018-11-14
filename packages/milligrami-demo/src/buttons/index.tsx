@@ -22,7 +22,7 @@ export const ButtonsView = () => {
       </Row>
       <Row>
         <Column>
-          <Button outline>Outline</Button>
+          <Button variant={"outline"}>Outline</Button>
         </Column>
         <Column>
           <h6>code:</h6>
@@ -31,7 +31,7 @@ export const ButtonsView = () => {
       </Row>
       <Row>
         <Column>
-          <Button clear>clear</Button>
+          <Button variant={"clear"}>clear</Button>
         </Column>
         <Column>
           <h6>code:</h6>
