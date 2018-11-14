@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+rm node_modules -rf
+rm yarn.lock
+yarn
