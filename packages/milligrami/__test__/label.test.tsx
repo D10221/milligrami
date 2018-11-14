@@ -1,8 +1,8 @@
 import * as assert from "assert";
+import { JSDOM } from "jsdom";
 import React from "react";
 import { renderToString } from "react-dom/server";
 import Label from "../src/label";
-const JSDOM = require("jsdom").JSDOM;
 
 describe("Labels", () => {
   const { document } = new JSDOM(

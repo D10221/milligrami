@@ -1,8 +1,8 @@
 import * as assert from "assert";
+import { JSDOM } from "jsdom";
 import React from "react";
 import { renderToString } from "react-dom/server";
 import { Container } from "../src";
-const JSDOM = require("jsdom").JSDOM;
 
 describe("Containers", () => {
 
