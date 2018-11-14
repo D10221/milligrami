@@ -1,4 +1,3 @@
-import * as assert from "assert";
 import { JSDOM } from "jsdom";
 import React from "react";
 import { renderToString } from "react-dom/server";
@@ -14,26 +13,26 @@ describe("Labels", () => {
           id="label-extra-class"
           variant={"inline"}
           className="extra-class"
-        />        
+        />
       </div>
     ) as any),
   ).window as Window;
 
   it("label", () => {
     const label = document.getElementById("label");
-    assert.equal(label.tagName.toLowerCase(), "label");
-    assert.equal(label.className, "");
+    expect(label.tagName.toLowerCase()).toBe("label");
+    expect(label.className).toBe("");
   });
 
   it("label-inline", () => {
     const label = document.getElementById("label-inline");
-    assert.equal(label.tagName.toLowerCase(), "label");
-    assert.equal(label.className, "label-inline");
+    expect(label.tagName.toLowerCase()).toBe("label");
+    expect(label.className).toBe("label-inline");
   });
 
   it("label-extra-class", () => {
     const label = document.getElementById("label-extra-class");
-    assert.equal(label.tagName.toLowerCase(), "label");
-    assert.equal(label.className, "extra-class label-inline");
+    expect(label.tagName.toLowerCase()).toBe("label");
+    expect(label.className).toBe("extra-class label-inline");
   });
 });

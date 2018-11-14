@@ -1,4 +1,3 @@
-import * as assert from "assert";
 import { JSDOM } from "jsdom";
 import React from "react";
 import { renderToString } from "react-dom/server";
@@ -26,22 +25,22 @@ describe("Float", () => {
 
   it("float-left", () => {
     const float = document.getElementById("float-left");
-    assert.equal(float.tagName.toLowerCase(), "div");
-    assert.equal(float.className, "float-left");
+    expect(float.tagName.toLowerCase()).toBe("div");
+    expect(float.className).toBe("float-left");
   });
   it("float-right", () => {
     const float = document.getElementById("float-right");
-    assert.equal(float.tagName.toLowerCase(), "div");
-    assert.equal(float.className, "float-right");
+    expect(float.tagName.toLowerCase()).toBe("div");
+    expect(float.className).toBe("float-right");
   });
   it("float-extra-class", () => {
     const float = document.getElementById("float-extra-class");
-    assert.equal(float.tagName.toLowerCase(), "div");
-    assert.equal(float.className, "extra-class float-left");
+    expect(float.tagName.toLowerCase()).toBe("div");
+    expect(float.className).toBe("extra-class float-left");
   });
   it("float-extra-classes", () => {
     const float = document.getElementById("float-extra-classes");
-    assert.equal(float.tagName.toLowerCase(), "div");
-    assert.equal(float.className, "extra-class extra-class-1 float-left");
+    expect(float.tagName.toLowerCase()).toBe("div");
+    expect(float.className).toBe("extra-class extra-class-1 float-left");
   });
 });

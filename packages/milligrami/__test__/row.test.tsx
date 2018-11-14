@@ -1,4 +1,3 @@
-import * as assert from "assert";
 import { JSDOM } from "jsdom";
 import React from "react";
 import { renderToString } from "react-dom/server";
@@ -23,55 +22,55 @@ describe("Rows", () => {
 
   it("row", () => {
     const row = document.getElementById("row");
-    assert.equal(row.tagName.toLowerCase(), "div");
-    assert.equal(row.className, "row");
+    expect(row.tagName.toLowerCase()).toBe("div");
+    expect(row.className).toBe("row");
   });
 
   it("row-wrap", () => {
     const button = document.getElementById("row-wrap");
-    assert.equal(button.tagName.toLowerCase(), "div");
-    assert.equal(button.className, "row row-wrap");
+    expect(button.tagName.toLowerCase()).toBe("div");
+    expect(button.className).toBe("row row-wrap");
   });
 
   it("row-no-padding", () => {
     const button = document.getElementById("row-no-padding");
-    assert.equal(button.tagName.toLowerCase(), "div");
-    assert.equal(button.className, "row row-no-padding");
+    expect(button.tagName.toLowerCase()).toBe("div");
+    expect(button.className).toBe("row row-no-padding");
   });
 
   it("row-top", () => {
     const button = document.getElementById("row-top");
-    assert.equal(button.tagName.toLowerCase(), "div");
-    assert.equal(button.className, "row row-top");
+    expect(button.tagName.toLowerCase()).toBe("div");
+    expect(button.className).toBe("row row-top");
   });
 
   it("row-bottom", () => {
     const button = document.getElementById("row-bottom");
-    assert.equal(button.tagName.toLowerCase(), "div");
-    assert.equal(button.className, "row row-bottom");
+    expect(button.tagName.toLowerCase()).toBe("div");
+    expect(button.className).toBe("row row-bottom");
   });
 
   it("row-center", () => {
     const button = document.getElementById("row-center");
-    assert.equal(button.tagName.toLowerCase(), "div");
-    assert.equal(button.className, "row row-center");
+    expect(button.tagName.toLowerCase()).toBe("div");
+    expect(button.className).toBe("row row-center");
   });
 
   it("row-strech", () => {
     const button = document.getElementById("row-strech");
-    assert.equal(button.tagName.toLowerCase(), "div");
-    assert.equal(button.className, "row row-strech");
+    expect(button.tagName.toLowerCase()).toBe("div");
+    expect(button.className).toBe("row row-strech");
   });
 
   it("row-baseline", () => {
     const button = document.getElementById("row-baseline");
-    assert.equal(button.tagName.toLowerCase(), "div");
-    assert.equal(button.className, "row row-baseline");
+    expect(button.tagName.toLowerCase()).toBe("div");
+    expect(button.className).toBe("row row-baseline");
   });
 
   it("row-extra-class", () => {
     const button = document.getElementById("row-extra-class");
-    assert.equal(button.tagName.toLowerCase(), "div");
-    assert.equal(button.className, "extra-class row");
+    expect(button.tagName.toLowerCase()).toBe("div");
+    expect(button.className).toBe("extra-class row");
   });
 });

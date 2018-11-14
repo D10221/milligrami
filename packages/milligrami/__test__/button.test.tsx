@@ -1,4 +1,3 @@
-import * as assert from "assert";
 import { JSDOM } from "jsdom";
 import React from "react";
 import { renderToString } from "react-dom/server";
@@ -18,25 +17,25 @@ describe("Buttons", () => {
 
   it("button", () => {
     const button = document.getElementById("button");
-    assert.equal(button.tagName.toLowerCase(), "button");
-    assert.equal(button.className, "button");
+    expect(button.tagName.toLowerCase()).toBe("button");
+    expect(button.className).toBe("button");
   });
 
   it("button-outline", () => {
     const button = document.getElementById("button-outline");
-    assert.equal(button.tagName.toLowerCase(), "button");
-    assert.equal(button.className, "button button-outline");
+    expect(button.tagName.toLowerCase()).toBe("button");
+    expect(button.className).toBe("button button-outline");
   });
 
   it("button-clear", () => {
     const button = document.getElementById("button-clear");
-    assert.equal(button.tagName.toLowerCase(), "button");
-    assert.equal(button.className, "button button-clear");
+    expect(button.tagName.toLowerCase()).toBe("button");
+    expect(button.className).toBe("button button-clear");
   });
 
   it("button-extra-class", () => {
     const button = document.getElementById("button-extra-class");
-    assert.equal(button.tagName.toLowerCase(), "button");
-    assert.equal(button.className, "extra-class button");
+    expect(button.tagName.toLowerCase()).toBe("button");
+    expect(button.className).toBe("extra-class button");
   });
 });
