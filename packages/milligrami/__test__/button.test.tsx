@@ -11,6 +11,7 @@ describe("Buttons", () => {
         <Button id="button-outline" variant={"outline"} />
         <Button id="button-clear" variant={"clear"} />
         <Button id="button-extra-class" className="extra-class" />
+        <Button id="input-button" element="input"/>
       </div>
     ) as any),
   ).window as Window;
@@ -38,4 +39,8 @@ describe("Buttons", () => {
     expect(button.tagName.toLowerCase()).toBe("button");
     expect(button.className).toBe("extra-class button");
   });
+
+  it("input-button", ()=>{
+    expect(document.getElementById("input-button").tagName.toLowerCase()).toBe("input");
+  })
 });

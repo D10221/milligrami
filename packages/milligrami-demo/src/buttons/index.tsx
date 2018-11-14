@@ -1,7 +1,6 @@
 import { Button, Column, Container, Row } from "milligrami";
 import React from "react";
 
-
 export const ButtonsView = () => {
   return (
     <Container>
@@ -26,7 +25,7 @@ export const ButtonsView = () => {
         </Column>
         <Column>
           <h6>code:</h6>
-          <code>{"<Button outline>Outline</Button>"}</code>
+          <code>{'<Button variant={"outline"}>Outline</Button>'}</code>
         </Column>
       </Row>
       <Row>
@@ -36,6 +35,15 @@ export const ButtonsView = () => {
         <Column>
           <h6>code:</h6>
           <code>{"<Button clear>clear</Button>"}</code>
+        </Column>
+      </Row>
+      <Row>
+        <Column>
+          <Button element={"input"} defaultValue={"Input Button"} />
+        </Column>
+        <Column>
+          <h6>Code:</h6>
+          <code>{'<Button element={"input"} value={"Input Button"}/>'}</code>
         </Column>
       </Row>
     </Container>

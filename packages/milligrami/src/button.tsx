@@ -4,27 +4,24 @@ import arrify from "./arrify";
 
 export type Variant = "outline" | "clear";
 
-export interface MilligramButtonProps {
-  variant?: Variant | Variant[];
-  type?:  keyof React.ReactHTML;
-  className?: string;
-}
-
 export type ButtonProps = React.HTMLProps<
-  HTMLButtonElement | HTMLAnchorElement | HTMLInputElement
-> &
-  MilligramButtonProps;
+  HTMLButtonElement & HTMLAnchorElement & HTMLInputElement
+> & {
+  variant?: Variant | Variant[];
+  element?: keyof React.ReactHTML;
+  className?: string;
+};
 
 const Button: React.StatelessComponent<ButtonProps> = ({
   variant,
   className,
-  type,
+  element,
   children,
   ...props
 }) => {
   const variants = arrify(variant);
   return React.createElement(
-    type || "button",
+    element || "button",
     {
       className: classNames(
         className,
