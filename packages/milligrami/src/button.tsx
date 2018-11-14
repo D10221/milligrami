@@ -1,54 +1,41 @@
-/**
- *
- * TODO: HOC , possibly taking ButtonProps|LinkButtonProps|InputButtonProps
- *  return Button|Link|Input?
- *  not returning always the same thing smells
- */
+import React from "react";
+import classNames from "classnames";
+import arrify from "./arrify";
 
-import * as React from "react";
-import { isDefined } from "./util";
+export type Variant = "outline" | "clear";
 
 export interface MilligramButtonProps {
-    outline?: boolean;
-    clear?: boolean;
+  variant?: Variant | Variant[];
+  type?:  keyof React.ReactHTML;
+  className?: string;
 }
 
-export type ButtonProps = React.HTMLProps<HTMLButtonElement> & MilligramButtonProps;
-export type LinkButtonProps = React.HTMLProps<HTMLAnchorElement> & MilligramButtonProps;
-export type InputButtonProps = React.HTMLProps<HTMLInputElement> & MilligramButtonProps;
+export type ButtonProps = React.HTMLProps<
+  HTMLButtonElement | HTMLAnchorElement | HTMLInputElement
+> &
+  MilligramButtonProps;
 
-export const Button = (xProps: ButtonProps) => {
-    const { outline, clear, className, ...props } = xProps;
-    const cn = (className ? `${className} ` : "") + "button" +
-        (isDefined(outline) && outline !== false ? " button-outline" : "") +
-        (isDefined(clear) && clear !== false ? " button-clear" : "");
-    return (
-        <button  {...{
-            className: cn,
-            ...props
-        }} />);
+const Button: React.StatelessComponent<ButtonProps> = ({
+  variant,
+  className,
+  type,
+  children,
+  ...props
+}) => {
+  const variants = arrify(variant);
+  return React.createElement(
+    type || "button",
+    {
+      className: classNames(
+        className,
+        "button",
+        variants.indexOf("clear") !== -1 && "button-clear",
+        variants.indexOf("outline") !== -1 && "button-outline",
+      ),
+      ...props,
+    },
+    children,
+  );
 };
 
-export const LinkButton = (xProps: LinkButtonProps) => {
-    const { outline, clear, className, ...props } = xProps;
-    const cn = (className ? `${className} ` : "") + "button" +
-        (isDefined(outline) && outline !== false ? " button-outline" : "") +
-        (isDefined(clear) && clear !== false ? " button-clear" : "");
-    return (
-        <a  {...{
-            className: cn,
-            ...props
-        }} />);
-};
-
-export const InputButton = (xProps: InputButtonProps) => {
-    const { outline, clear, className, ...props } = xProps;
-    const cn = (className ? `${className} ` : "") + "button" +
-        (isDefined(outline) && outline !== false ? " button-outline" : "") +
-        (isDefined(clear) && clear !== false ? " button-clear" : "");
-    return (
-        <input  {...{
-            className: cn,
-            ...props
-        }} />);
-};
+export default Button;

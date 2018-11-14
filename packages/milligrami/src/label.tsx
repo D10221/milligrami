@@ -1,15 +1,30 @@
 import * as React from "react";
-import { isUndefinedOrFalse } from "./util";
+import classNames from "classnames";
+import arrify from "./arrify";
+export type Variant = "inline";
 /** */
 export type LabelProps = React.HTMLProps<HTMLLabelElement> & {
-    inLine?: boolean;
+  variant?: Variant | Variant[];
+  className?: string;
 };
 /** */
-export const Label = (xProps: LabelProps) => {
-    const { inLine, className, ...props } = xProps;
-    const augmented = (className ? `${className} ` : "") +
-        (isUndefinedOrFalse(inLine) ? "" : "label-inline");
-    return (
-        <label {...{ className: augmented, ...props } } />
-    );
+const Label: React.StatelessComponent<LabelProps> = ({
+  variant,
+  className,
+  children,
+  ...props
+}) => {
+  const variants = arrify(variant);
+  return React.createElement(
+    "label",
+    {
+      className: classNames(
+        className,
+        variants.indexOf("inline") !== -1 && "label-inline",
+      ),
+      ...props,
+    },
+    children,
+  );
 };
+export default Label;

@@ -1,39 +1,45 @@
 import * as React from "react";
-import { isUndefinedOrFalse } from "./util";
+import classNames from "classnames";
+import arrify from "./arrify";
 
-export type RowProps = React.HTMLProps<HTMLDivElement> & {
-    rowWrap?: boolean,
-    rowNoPadding?: boolean,
-    rowTop?: boolean,
-    rowBottom?: boolean,
-    rowCenter?: boolean,
-    rowStretch?: boolean,
-    rowBaseline?: boolean
+export type Variant = keyof typeof variants;
+
+export type RowProps = React.HTMLProps<HTMLElement> & {
+  variant?: Variant | Variant[];
+  element?: "div";
 };
 
+const variants = {
+  wrap: "row-wrap",
+  noPadding: "row-no-padding",
+  top: "row-top",
+  bottom: "row-bottom",
+  center: "row-center",
+  strech: "row-strech",
+  baseline: "row-baseline",
+};
 /**
  *
  */
-export const Row = (xProps: RowProps) => {
-    const {
-        rowWrap,
-        rowNoPadding,
-        rowTop,
-        rowBottom,
-        rowCenter,
-        rowStretch,
-        rowBaseline,
+const Row: React.StatelessComponent<RowProps> = ({
+  children,
+  className,
+  element,
+  variant,
+  ...props
+}) => {
+  return React.createElement(
+    element || "div",
+    {
+      ...props,
+      className: classNames(
         className,
-        ...props } = xProps;
-    const cn = (className ? `${className} ` : "") + "row" +
-        (isUndefinedOrFalse(rowWrap) ? "" : " row-wrap") +
-        (isUndefinedOrFalse(rowNoPadding) ? "" : " row-no-padding") +
-        (isUndefinedOrFalse(rowTop) ? "" : " row-top") +
-        (isUndefinedOrFalse(rowBottom) ? "" : " row-bottom") +
-        (isUndefinedOrFalse(rowCenter) ? "" : " row-center") +
-        (isUndefinedOrFalse(rowStretch) ? "" : " row-stretch") +
-        (isUndefinedOrFalse(rowBaseline) ? "" : " row-baseline");
-    return (
-        <div {...{ className: cn, ...props }} />
-    );
+        "row",
+        ...arrify(variant).map(key => variants[key]),
+      ),
+    },
+    children,
+  );
 };
+
+export default Row;

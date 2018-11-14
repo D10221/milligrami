@@ -9,17 +9,17 @@ module.exports = {
     devtool: (!production ? "source-map" : undefined), 
     mode,
     entry: {
-        ['milligrami' + (production ? ".min" : "")]: path.resolve(__dirname, '../src/index.ts'),
+        ['milligrami' + (production ? ".min" : "")]: path.resolve(__dirname, 'src/index.ts'),
     },
     output: {
-        path: path.resolve(__dirname, '../lib/umd'),
+        path: path.resolve(__dirname, 'lib/umd'),
         filename: '[name].js',
         libraryTarget: 'umd',
         library: 'Milligrami',
         umdNamedDefine: true
     },
     resolve: {
-        extensions: ['.ts', '.tsx']
+        extensions: ['.ts', '.tsx', 'js', 'jsx']
     },
     // devtool: 'source-map',
     plugins: [

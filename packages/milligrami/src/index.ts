@@ -2,11 +2,11 @@
 /*
     Milligram's styled elements
  */
-export * from "./button";
-export * from "./clear-fix";
-export * from "./pre-code";
-export * from "./column";
-export * from "./container";
-export * from "./float";
-export * from "./label";
-export * from "./row";
+export { default as Button } from "./button";
+export { default as ClearFix } from "./clear-fix";
+export { default as PreCode } from "./pre-code";
+export { default as Column } from "./column";
+export { default as Container } from "./container";
+export { default as utils } from "./utils";
+export { default as Label } from "./label";
+export { default as Row } from "./row";

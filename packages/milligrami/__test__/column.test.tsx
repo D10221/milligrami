@@ -2,9 +2,7 @@ import * as assert from "assert";
 import * as React from "react";
 const JSDOM = require("jsdom").JSDOM;
 import { renderToString } from "react-dom/server";
-import {
-    Column
-} from "../src";
+import Column from "../src/column";
 
 describe("Columns", () => {
 
