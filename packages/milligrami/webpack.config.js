@@ -1,6 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
-const tsConfigPath = path.resolve(__dirname, "./tsconfig.json")
+const tsConfigPath = path.resolve(__dirname, "./tsconfig.es5.json")
 const args = process.argv.slice(2);
 const mode = args[args.indexOf("--mode") + 1] === "production" ? "production" : "development";
 const production = mode === "production";

@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es2015",
     "module": "commonjs",
+    "lib": [
+      "esnext", "dom"
+    ],
     "declaration": true,
     "outDir": "./lib",
     "jsx": "react",

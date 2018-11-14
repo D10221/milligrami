@@ -3,9 +3,7 @@
     "target": "es5",
     "lib": ["esnext", "dom"],
     "module": "commonjs",
-    "declaration": true,
     "jsx": "react",
-    "sourceMap": true,
     "strict": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
@@ -13,7 +11,6 @@
     "skipDefaultLibCheck": true
   },
   "include": [
-    "src",
-    "../../node_modules/@types"
+    "src"    
   ]
 }
