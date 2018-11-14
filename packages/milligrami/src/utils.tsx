@@ -8,9 +8,13 @@ const floatDirections = {
 
 type Float = "left" | "right";
 
-type Utils = (o: { float?: Float }, classes?: string | (string[])) => string;
+type Utils = (o: { float?: Float ,clearfix?: boolean }, classes?: string | (string[])) => string;
 
-const utils: Utils = ({ float }, classes): string =>
-  classNames(...arrify(classes), float && floatDirections[float]);
+const utils: Utils = ({ float, clearfix }, classes): string =>
+  classNames(
+    ...arrify(classes), 
+    float && floatDirections[float],
+    Boolean(clearfix) && "clearfix"
+  );
 
 export default utils;

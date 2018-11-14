@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 import { Container, Row } from "milligrami";
 export const RowsView = () => (

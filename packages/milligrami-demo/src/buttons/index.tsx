@@ -1,5 +1,5 @@
 import { Button, Column, Container, Row } from "milligrami";
-import * as React from "react";
+import React from "react";
 
 
 export const ButtonsView = () => {

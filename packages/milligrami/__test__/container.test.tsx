@@ -1,10 +1,8 @@
 import * as assert from "assert";
-import * as React from "react";
-const JSDOM = require("jsdom").JSDOM;
+import React from "react";
 import { renderToString } from "react-dom/server";
-import {
-    Container
-} from "../src";
+import { Container } from "../src";
+const JSDOM = require("jsdom").JSDOM;
 
 describe("Containers", () => {
 

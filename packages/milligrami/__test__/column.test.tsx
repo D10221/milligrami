@@ -1,8 +1,8 @@
 import * as assert from "assert";
-import * as React from "react";
-const JSDOM = require("jsdom").JSDOM;
+import React from "react";
 import { renderToString } from "react-dom/server";
 import Column from "../src/column";
+const JSDOM = require("jsdom").JSDOM;
 
 describe("Columns", () => {
 

@@ -1,6 +1,6 @@
-import { ClearFix, Column, Container, utils, Label, Row } from "milligrami";
+import { Column, Container, Label, Row, utils } from "milligrami";
+import React from "react";
 
-import * as React from "react";
 export const UtilsView = () => {
   return (
     <Container>
@@ -16,10 +16,10 @@ export const UtilsView = () => {
       <Row>
         <label> clearFix, float-left, float-right</label>
         <div>
-          <ClearFix>
+          <div className={utils({ clearfix: true })}>
             <div className={utils({ float: "left" })}>LEFT</div>
             <div className={utils({ float: "right" })}>RIGHT</div>
-          </ClearFix>
+          </div>
         </div>
       </Row>
       <Row>
@@ -28,10 +28,11 @@ export const UtilsView = () => {
           <pre>
             <code>{`
 <!-- Clear any float  -->
-<ClearFix>
-    <Float xFloat="left">LEFT</Float>
-    <Float xFloat="right">RIGHT</Float>
-</ClearFix>
+<div className={utils({ clearfix: true })}>
+  <div className={utils({ float: "left" })}>LEFT</div>
+  <div className={utils({ float: "right" })}>RIGHT</div>
+  </div>
+</div>
                                 `}</code>
           </pre>
         </Column>

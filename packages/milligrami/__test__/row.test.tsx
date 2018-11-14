@@ -1,8 +1,8 @@
 import * as assert from "assert";
-import * as React from "react";
-const JSDOM = require("jsdom").JSDOM;
+import React from "react";
 import { renderToString } from "react-dom/server";
 import Row from "../src/row";
+const JSDOM = require("jsdom").JSDOM;
 
 describe("Rows", () => {
   const { document } = new JSDOM(
