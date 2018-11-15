@@ -4,21 +4,22 @@ import React from "react";
 export type ColumnProps = React.HTMLProps<HTMLDivElement> & {
   columnWidth?: 10 | 20 | 25 | 33 | 40 | 50 | 60 | 66 | 75 | 80 | 90;
   offset?: 10 | 20 | 25 | 33 | 40 | 50 | 60 | 66 | 75 | 80 | 90;
-  type?:  keyof React.ReactHTML;
+  element?: keyof React.ReactHTML;
 };
 /**
- * a <div/> column
+ *
+ * @param param0
  */
-export default (({
+const column: React.StatelessComponent<ColumnProps> = ({
   className,
   columnWidth,
   offset,
-  type,
+  element,
   children,
   ...props
 }) =>
   React.createElement(
-    type || "div",
+    element || "div",
     {
       className: classNames(
         className,
@@ -29,4 +30,9 @@ export default (({
       ...props,
     },
     children,
-  )) as React.StatelessComponent<ColumnProps>;
+  );
+column.displayName = `Column`;
+/**
+ * a <div/> column
+ */
+export default column;

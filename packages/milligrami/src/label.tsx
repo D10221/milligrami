@@ -1,30 +1,19 @@
-import classNames from "classnames";
-import React from "react";
-import arrify from "./arrify";
-export type Variant = "inline";
-/** */
-export type LabelProps = React.HTMLProps<HTMLLabelElement> & {
-  variant?: Variant | Variant[];
-  className?: string;
+import wrapper from "./wrapper";
+const variants = {
+  inline: "label-inline",
 };
+/**
+ * label isn't a class in Milligram
+ * but including it for consistency
+ * will render <label class="label label-inline">
+ */
+const defaultClass = "label";
+
+const defaultElement = "label";
+const label = wrapper<HTMLLabelElement, typeof variants>(
+  defaultElement,
+  defaultClass,
+  variants,
+);
 /** */
-const Label: React.StatelessComponent<LabelProps> = ({
-  variant,
-  className,
-  children,
-  ...props
-}) => {
-  const variants = arrify(variant);
-  return React.createElement(
-    "label",
-    {
-      className: classNames(
-        className,
-        variants.indexOf("inline") !== -1 && "label-inline",
-      ),
-      ...props,
-    },
-    children,
-  );
-};
-export default Label;
+export default label;

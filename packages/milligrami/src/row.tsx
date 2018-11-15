@@ -1,13 +1,4 @@
-import classNames from "classnames";
-import React from "react";
-import arrify from "./arrify";
-
-export type Variant = keyof typeof variants;
-
-export type RowProps = React.HTMLProps<HTMLElement> & {
-  variant?: Variant | Variant[];
-  element?: "div";
-};
+import wrapper from "./wrapper";
 
 const variants = {
   wrap: "row-wrap",
@@ -18,28 +9,15 @@ const variants = {
   strech: "row-strech",
   baseline: "row-baseline",
 };
+const defaultClass = "row";
+const defaultElement = "div";
 /**
  *
  */
-const Row: React.StatelessComponent<RowProps> = ({
-  children,
-  className,
-  element,
-  variant,
-  ...props
-}) => {
-  return React.createElement(
-    element || "div",
-    {
-      ...props,
-      className: classNames(
-        className,
-        "row",
-        ...arrify(variant).map(key => variants[key]),
-      ),
-    },
-    children,
-  );
-};
+const Row = wrapper<HTMLDivElement, typeof variants>(
+  defaultElement,
+  defaultClass,
+  variants,
+);
 
 export default Row;

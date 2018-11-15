@@ -21,18 +21,18 @@ describe("Labels", () => {
   it("label", () => {
     const label = document.getElementById("label");
     expect(label.tagName.toLowerCase()).toBe("label");
-    expect(label.className).toBe("");
+    expect(label.className).toBe("label");
   });
 
   it("label-inline", () => {
     const label = document.getElementById("label-inline");
     expect(label.tagName.toLowerCase()).toBe("label");
-    expect(label.className).toBe("label-inline");
+    expect(label.className).toBe("label label-inline");
   });
 
   it("label-extra-class", () => {
     const label = document.getElementById("label-extra-class");
     expect(label.tagName.toLowerCase()).toBe("label");
-    expect(label.className).toBe("extra-class label-inline");
+    expect(label.className).toBe("extra-class label label-inline");
   });
 });

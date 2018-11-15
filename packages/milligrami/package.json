@@ -9,7 +9,7 @@
     "build": "rimraf lib && tsc -p ./ && webpack --config ./webpack.config.js --mode production",
     "types:check": "tsc --noEmit",
     "types:watch": "tsc --noEmit --watch",
-    "types": "tsc --emitDeclarationOnly"
+    "types": "tsc --emitDeclarationOnly"    
   },
   "keywords": [
     "milligram",

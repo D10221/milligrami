@@ -7,7 +7,7 @@ export const ColumnsView = () => {
       <h3> Column no attributes</h3>
       <Container>
         <Row>
-          <Column>
+          <Column element="span">
             <span>3</span>
           </Column>
           <Column>

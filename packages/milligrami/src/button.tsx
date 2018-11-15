@@ -1,38 +1,14 @@
-import React from "react";
-import classNames from "classnames";
-import arrify from "./arrify";
+import wrapper from "./wrapper";
 
-export type Variant = "outline" | "clear";
+const variants = { outline: "button-outline",  clear: "button-clear",};
 
-export type ButtonProps = React.HTMLProps<
-  HTMLButtonElement & HTMLAnchorElement & HTMLInputElement
-> & {
-  variant?: Variant | Variant[];
-  element?: keyof React.ReactHTML;
-  className?: string;
-};
+const Button = wrapper<
+  HTMLButtonElement | HTMLAnchorElement | HTMLInputElement, 
+  typeof variants
+>(
+  /* defaultElement: */ "button", 
+  /* baseClass: */ "button", 
+  variants);
 
-const Button: React.StatelessComponent<ButtonProps> = ({
-  variant,
-  className,
-  element,
-  children,
-  ...props
-}) => {
-  const variants = arrify(variant);
-  return React.createElement(
-    element || "button",
-    {
-      className: classNames(
-        className,
-        "button",
-        variants.indexOf("clear") !== -1 && "button-clear",
-        variants.indexOf("outline") !== -1 && "button-outline",
-      ),
-      ...props,
-    },
-    children,
-  );
-};
 
 export default Button;
