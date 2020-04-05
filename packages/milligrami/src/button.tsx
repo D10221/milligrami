@@ -13,7 +13,7 @@ export interface MilligramButtonProps {
     clear?: boolean;
 }
 
-export type ButtonProps = React.HTMLProps<HTMLButtonElement> & MilligramButtonProps;
+export type ButtonProps = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> & MilligramButtonProps;
 export type LinkButtonProps = React.HTMLProps<HTMLAnchorElement> & MilligramButtonProps;
 export type InputButtonProps = React.HTMLProps<HTMLInputElement> & MilligramButtonProps;
 
