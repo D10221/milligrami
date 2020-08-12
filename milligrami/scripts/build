@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+
+rm dist -rf
+tsc -p . 
+esbuild src/index.js \
+  --outfile=dist/react-global/index.js \
+  --bundle \
+  --jsx-factory=React.createElement \
+  --target=esnext \
+  --format=esm  
+esbuild src/index.js \
+  --outfile=dist/preact/index.js \
+  --bundle \
+  --jsx-factory=preact.h \
+  --target=esnext \
+  --format=esm  

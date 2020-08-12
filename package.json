@@ -1,7 +1,6 @@
 {
-  "name": "milligrami",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "milligrami"
   ]
 }

@@ -1,10 +1,9 @@
-import * as assert from "assert";
-import * as React from "react";
-const JSDOM = require("jsdom").JSDOM;
+import assert from "assert";
+import React from "react";
 import { renderToString } from "react-dom/server";
-import {
-    Container
-} from "../";
+import { Container } from "../src/index.js";
+import { JSDOM } from "jsdom";
+window["React"] = React;
 
 describe("Containers", () => {
 
@@ -16,7 +15,7 @@ describe("Containers", () => {
                 <Container id="container" />
                 <Container id="container-extra-class" className="extra-class"/>
             </div>)
-    )).window as Window;
+    )).window;
 
     it("container", () => {
         const container = (document.getElementById("container"));

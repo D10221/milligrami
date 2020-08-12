@@ -1,25 +1,18 @@
-node_modules
-built/
-# lib/
-# bundle/
-dist/
-scripts/
-src/
-.vscode/
-.idea/
+**/node_modules/*
+**/.vscode/
+**/.idea/
+**/__demo__/*
+**/__test__/*
+**/out/*
+**/dist/*
+**/built/*
 
 test.js
 
 tsconfig.*
 webpack*
 tslint*
-
 *.tgz
 *.zip
-**/__demo__/*
-**/__test__/*
-**/out/*
-**/dist/*
-**/built/*
-# **/lib/*
-# **/bundle/*
+*.lock
+*.log
