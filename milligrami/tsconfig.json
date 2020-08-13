@@ -5,7 +5,7 @@
     "moduleResolution": "node",
     "jsx": "preserve",
     "declaration": true,
-    "declarationDir": "./dist/types/",    
+    "declarationDir": "./dist/types/",
     "emitDeclarationOnly": true,
     "strict": false,
     "allowJs": true,
@@ -13,7 +13,5 @@
     "esModuleInterop": true,
     "skipLibCheck": true
   },
-  "include": [
-    "src/index.js"    
-  ]
+  "include": ["src/index.js"]
 }

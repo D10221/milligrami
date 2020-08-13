@@ -1,4 +1,3 @@
-
 import { isDefined } from "./is.js";
 /** @param {*} props */
 export const Button = ({ outline, clear, className, ...props }) => {

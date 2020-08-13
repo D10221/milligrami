@@ -1,13 +1,14 @@
 {
   "name": "milligrami",
-  "version": "0.4.0",
+  "version": "0.4.0-alpha.1",
   "description": "Milligram React wrapper",
   "module": "src/index.js",
   "type": "module",
   "types": "types/index.d.ts",
   "scripts": {
     "test": "jest",
-    "build": "bash -c ./scripts/build"
+    "build": "bash -c ./scripts/build",
+    "pretty": "prettier --write **/*.{js,jsx,ts,tsx,json,md}"
   },
   "keywords": [
     "milligram",
@@ -39,10 +40,15 @@
     "jest": "^26.3.0",
     "jsdom": "^16.4.0",
     "milligram": "^1.4.1",
+    "prettier": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "rimraf": "^3.0.2",
-    "typescript": "^3.9.7"   
+    "typescript": "^3.9.7"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "files": [
+    "src",
+    "dist/"
+  ]
 }

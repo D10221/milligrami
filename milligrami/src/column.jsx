@@ -8,7 +8,7 @@ export const Column = ({ className, columnWidth, offset, ...props }) => {
   return <div {...{ className: cn, ...props }} />;
 };
 /** @param {*} props */
-export const ColumnSpan = ({ className, columnWidth, offset, ...props }) => {  
+export const ColumnSpan = ({ className, columnWidth, offset, ...props }) => {
   const cn =
     (className ? `${className} ` : "") +
     "column" +

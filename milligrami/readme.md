@@ -1,16 +1,17 @@
 ### JSX [Milligram](http://milligram.io/) wrapper
 
-*doesnt include 'milligram.css'*
+_doesnt include 'milligram.css'_
 
 from consumer
 
     '@import '~milligram/dist/milligram.css';
-    
+
 or directly into "index.html"
 
     <link src-"somewhere/milligram.css"/>
 
-Usage: 
+Usage:
+
 ```
 import { Button } from "milligrami"
 
@@ -22,21 +23,20 @@ const App = () => (
     </div>
 );
 ```
-Note: All elements are doing pretty much the same,   
 
-- props are passed down to (in this case) the <code><button\/\></code> Tag   
-only the <code>className</code> is appended with the respective Milligram css-class
+Note: All elements are doing pretty much the same,
 
-        <Button  type="submit" outline className="extra-class"/>
+- props are passed down to (in this case) the <code><button\/\></code> Tag  
+  only the <code>className</code> is appended with the respective Milligram css-class
 
-should render 
+          <Button  type="submit" outline className="extra-class"/>
+
+should render
 
     <button type-"submit" class="extra-class button button-outline">
         <!-- children ? -->
     <button>
 
-    
+### Compatibillity
 
-
-### Compatibillity 
 it works on my computer

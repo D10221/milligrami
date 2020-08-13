@@ -1,5 +1,5 @@
 /** @param {*} props */
-export const Container = ({ className, ...props }) => {  
+export const Container = ({ className, ...props }) => {
   const augmented = (className ? `${className} ` : "") + "container";
   return <div {...{ className: augmented, ...props }} />;
 };
