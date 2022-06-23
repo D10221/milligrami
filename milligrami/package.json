@@ -38,7 +38,7 @@
     "@types/react-dom": "^16.9.8",
     "esbuild": "^0.6.21",
     "jest": "^26.3.0",
-    "jsdom": "^16.4.0",
+    "jsdom": "^16.5.0",
     "milligram": "^1.4.1",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
